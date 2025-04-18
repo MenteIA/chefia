@@ -1,0 +1,25 @@
+# Ignora el archivo con claves privadas
+.env.*
+
+# Dependencias de Node.js
+node_modules/
+
+# Salida de producción (por si usas build)
+www/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de logs
+*.log
+
+# Entornos de desarrollo
+.vscode/
+.idea/
+
+# Android Studio
+android/local.properties
+*.iml
+.gradle/
+build/

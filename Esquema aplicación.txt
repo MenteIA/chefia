@@ -1,0 +1,35 @@
+[🧑 Usuario escribe ingredientes]
+            |
+            v
+╔════════════════════════════════╗
+║        🧱 HTML (index.html)     ║
+║  - Input de texto              ║
+║  - Botón "Generar receta"      ║
+║  - Área para mostrar receta    ║
+╚════════════════════════════════╝
+            |
+            ▼
+╔════════════════════════════════╗
+║     🧠 JavaScript (script.js)   ║
+║  - Captura el input            ║
+║  - Comprueba la caché          ║
+║  - Si no hay caché:            ║
+║     🔄 Llama a OpenRouter       ║
+║     - Espera la respuesta      ║
+║     - Muestra la receta        ║
+║     - Guarda en caché          ║
+╚════════════════════════════════╝
+            |
+            ▼
+╔════════════════════════════════╗
+║   🌐 API de IA (OpenRouter)     ║
+║  - Procesa los ingredientes    ║
+║  - Devuelve una receta         ║
+╚════════════════════════════════╝
+            |
+            ▼
+[📱 El usuario ve la receta generada]
+
+Si ya has consultado esos ingredientes antes, el JS salta este paso:
+
+ 🔁 Usa receta guardada en memoria

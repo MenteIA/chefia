@@ -1,0 +1,7 @@
+{
+  "appId": "com.ferran.recetas",
+  "appName": "Recetas con IA",
+  "webDir": "www",
+  "bundledWebRuntime": false
+}
+
