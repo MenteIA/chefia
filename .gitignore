@@ -23,3 +23,7 @@ android/local.properties
 *.iml
 .gradle/
 build/
+.env
+Clean
+Rebuild
+Esquema aplicación.txt
