@@ -1,7 +1,8 @@
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
-const fetch = require("node-fetch");
+
+const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -20,7 +21,7 @@ app.post("/api/receta", async (req, res) => {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        model: "mistralai/mixtral-8x7b-instruct",
+        model: "openai/gpt-3.5-turbo",
         messages: [{
           role: "user",
           content: `Tengo estos ingredientes: ${ingredientes}. ¿Qué receta puedo hacer con ellos?`
@@ -31,7 +32,7 @@ app.post("/api/receta", async (req, res) => {
 
     const data = await response.json();
     const receta = data.choices?.[0]?.message?.content || "No se pudo generar receta 😢";
-
+    console.log("Respuesta OpenRouter:", data);
     res.json({ receta });
 
   } catch (error) {
